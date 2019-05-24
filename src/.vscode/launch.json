@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - prueba",
+            "request": "launch",
+            "mainClass": "prueba",
+            "projectName": "src_46424dc6"
+        }
+    ]
+}
