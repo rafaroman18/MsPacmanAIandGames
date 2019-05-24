@@ -3,3 +3,5 @@ This repository contains the implementation of different algorithms based on the
 
 
 Also, using the MsPacman Framework by *kefki*: https://github.com/kefik/MsPacMan-vs-Ghosts-AI
+
+## 1. Finite State Machine 
