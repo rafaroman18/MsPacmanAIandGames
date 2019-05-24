@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RandomPacMan",
+            "request": "launch",
+            "mainClass": "game.controllers.pacman.examples.RandomPacMan"
+        }
+    ]
+}
