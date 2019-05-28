@@ -1,10 +1,20 @@
-import game.controllers.pacman.FirstStateMachine;
+import game.controllers.pacman.FiniteStateMachine;
+import game.controllers.pacman.examples.NearestPillPacManVS;
+import game.controllers.pacman.examples.RandomPacMan;
+import game.core.Replay;
+
+import java.io.IOException;
+import java.io.File;
+
 
 
 public class running
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
-        FirstStateMachine.main(args);
+        FiniteStateMachine.main(args);
+        
+        //File replay = new File("replay.log");
+        //Replay R = new Replay(replay);
     }
 }

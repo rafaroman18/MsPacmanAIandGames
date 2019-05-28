@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FirstStateMachine",
+            "request": "launch",
+            "mainClass": "game.controllers.pacman.FirstStateMachine"
+        }
+    ]
+}
