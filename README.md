@@ -5,7 +5,7 @@ This repository is oriented to college studients and only for knowledge purposes
 This repository is based (and is where the information is extracted) on the book ***Artificial Intelligence and Games*** by *Georgios N. Yannakakis* and *Julian Togelius*: http://gameaibook.org/
 
 
-Also, using the **MsPacman Framework **by *kefki*: https://github.com/kefik/MsPacMan-vs-Ghosts-AI
+Also, using the **MsPacman Framework** by *kefki*: https://github.com/kefik/MsPacMan-vs-Ghosts-AI
 
 ## 1. Finite State Machine 
 The FSM used in this first method is the following.
