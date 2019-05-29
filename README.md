@@ -8,4 +8,4 @@ Also, using the MsPacman Framework by *kefki*: https://github.com/kefik/MsPacMan
 The FSM used in this first method is the following
 
 
-![Finite State Machine used in Pacman](/images_met/FSM.jpg)
+![Finite State Machine used in Pacman](images_met/FSM.jpg)
