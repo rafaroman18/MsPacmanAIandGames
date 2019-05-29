@@ -56,7 +56,11 @@ public final class FiniteStateMachine extends PacManHijackController {
 		int[] activePills = game.getPillIndicesActive();
 		int[] activePowerPills = game.getPowerPillIndicesActive();
 		int[] targetsArray = new int[activePills.length + activePowerPills.length];
-		int[] ghostsTarg = new int[4];
+		int[] ghostsTarg = new int[4]; //nodes where ghosts are
+		int[] EdibleGhost; //index of Edible ghosts 
+		int[] notEdibleGhost; //index of NOT Edible ghosts
+		int EdibleGhostLength = 0;
+		int notEdibleGhostLength = 0;
 
 		// index for active pills
 		for (int i = 0; i < activePills.length; i++)
@@ -67,6 +71,37 @@ public final class FiniteStateMachine extends PacManHijackController {
 		// index of all ghosts
 		for (int i = 0; i < G.NUM_GHOSTS; i++)
 			ghostsTarg[i] = game.getCurGhostLoc(i);
+
+		//index of edible and non-edible ghosts
+		int[] aux1 = new int[4];
+		int[] aux2 = new int[4];
+		for(int i = 0;i<Game.NUM_GHOSTS;++i)
+		{
+			if(game.isEdible(i))
+			{
+				aux1[EdibleGhostLength] = game.getCurGhostLoc(i);
+				EdibleGhostLength++;
+			}
+			else
+			{
+				aux2[notEdibleGhostLength] = game.getCurGhostLoc(i);
+				notEdibleGhostLength++;
+			}
+		}
+		EdibleGhost = new int[EdibleGhostLength];
+		notEdibleGhost = new int[notEdibleGhostLength];
+		for(int i = 0,j = 0;i < EdibleGhostLength || j < notEdibleGhostLength ;++j,++i)
+		{
+			if(i<EdibleGhostLength)
+			{
+				EdibleGhost[i] = aux1[i];
+			}
+			if(j<notEdibleGhostLength)
+			{
+				notEdibleGhost[j] = aux2[j];
+			}
+		}
+
 
 		// add the path from Ms Pac-Man to the nearest existing pill
 		int nearest = game.getTarget(current, targetsArray, true, G.DM.PATH);
@@ -124,15 +159,18 @@ public final class FiniteStateMachine extends PacManHijackController {
 					}
 				}
 
-				if ((game.getEdibleTime(NearestGhost) < TIME_FLASH && game.getEdibleTime(NearestGhost) >= 0)) {
+				if ((game.getEdibleTime(NearestGhost) < TIME_FLASH && game.getEdibleTime(NearestGhost) > 0)) {
 					currentState = states[currentState][1];
 				}
 			} else // check if ghosts are not visible anymore
 			{
+				//this loop is to check that we will only have in mind the nearest ghosts NOT edible
 				boolean visible = false;
-				for (int i = 0; i < G.NUM_GHOSTS && visible == false; ++i) {
-					if (game.getPathDistance(current, ghostsTarg[i]) > 0
-							&& game.getPathDistance(current, ghostsTarg[i]) <= VISIBLE_DISTANCE) {
+				
+				//we will have in mind the distance to the nearest ghost NOT edible
+				for (int i = 0; i < notEdibleGhost.length && visible == false; ++i) {
+					if (game.getPathDistance(current, notEdibleGhost[i]) > 0
+							&& game.getPathDistance(current, notEdibleGhost[i]) <= VISIBLE_DISTANCE) {
 						visible = true;
 					}
 				}
@@ -149,14 +187,15 @@ public final class FiniteStateMachine extends PacManHijackController {
 
 		} else {
 
-			nearest = game.getTarget(current, ghostsTarg, true, G.DM.PATH);
 
 			if (currentState == 1) // if chase, pacman will chase the closest ghost
 			{
+				nearest = game.getTarget(current, EdibleGhost, true, G.DM.PATH);
 				pacman.set(game.getNextPacManDir(nearest, true, G.DM.PATH));
 
 			} else // if evade, pacman will evade the nearest ghost
 			{
+				nearest = game.getTarget(current, notEdibleGhost, true, G.DM.PATH);
 				pacman.set(game.getNextPacManDir(nearest, false, G.DM.PATH));
 			}
 		}

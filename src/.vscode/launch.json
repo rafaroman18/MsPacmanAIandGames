@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "FiniteStateMachine.src.main.java.running.App",
+            "projectName": "src_8643c5b"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - running",
             "request": "launch",
             "mainClass": "running",
