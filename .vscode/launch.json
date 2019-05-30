@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - running",
+            "request": "launch",
+            "mainClass": "running",
+            "projectName": "PacMan-vs-Ghosts-Agents"
+        }
+    ]
+}

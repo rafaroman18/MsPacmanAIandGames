@@ -1,4 +1,4 @@
-package cz.cuni.mff.amis.pacman.tournament.utils;
+package game.controllers.pacman.tournament.utils;
 
 public class Sanitize {
 

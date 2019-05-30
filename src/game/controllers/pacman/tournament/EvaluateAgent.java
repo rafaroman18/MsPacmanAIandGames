@@ -1,4 +1,4 @@
-package cz.cuni.mff.amis.pacman.tournament;
+package game.controllers.pacman.tournament;
 
 import game.SimulatorConfig;
 import game.controllers.pacman.IPacManController;
@@ -8,11 +8,11 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.lang.reflect.Constructor;
 
-import cz.cuni.mff.amis.pacman.tournament.run.PacManResults;
-import cz.cuni.mff.amis.pacman.tournament.run.PacManRun;
-import cz.cuni.mff.amis.pacman.tournament.run.PacManRunResult;
-import cz.cuni.mff.amis.pacman.tournament.run.PacManRunsGenerator;
-import cz.cuni.mff.amis.pacman.tournament.utils.Sanitize;
+import game.controllers.pacman.tournament.run.PacManResults;
+import game.controllers.pacman.tournament.run.PacManRun;
+import game.controllers.pacman.tournament.run.PacManRunResult;
+import game.controllers.pacman.tournament.run.PacManRunsGenerator;
+import game.controllers.pacman.tournament.utils.Sanitize;
 
 public class EvaluateAgent {
 	

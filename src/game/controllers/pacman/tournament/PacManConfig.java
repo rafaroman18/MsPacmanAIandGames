@@ -1,4 +1,4 @@
-package cz.cuni.mff.amis.pacman.tournament;
+package game.controllers.pacman.tournament;
 
 import game.SimulatorConfig;
 

@@ -1,6 +1,6 @@
-package cz.cuni.mff.amis.pacman.tournament.run;
+package game.controllers.pacman.tournament.run;
 
-import cz.cuni.mff.amis.pacman.tournament.PacManConfig;
+import game.controllers.pacman.tournament.PacManConfig;
 import game.controllers.pacman.IPacManController;
 
 public class PacManRuns {

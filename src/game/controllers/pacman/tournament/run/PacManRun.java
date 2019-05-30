@@ -1,4 +1,4 @@
-package cz.cuni.mff.amis.pacman.tournament.run;
+package game.controllers.pacman.tournament.run;
 
 import game.PacManSimulator;
 import game.SimulatorConfig;
@@ -8,7 +8,7 @@ import game.core.Game;
 import java.io.File;
 import java.lang.reflect.Constructor;
 
-import cz.cuni.mff.amis.pacman.tournament.PacManConfig;
+import game.controllers.pacman.tournament.PacManConfig;
 
 public class PacManRun {
 	
