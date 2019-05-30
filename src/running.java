@@ -6,7 +6,7 @@ import game.core.Replay;
 
 import java.io.File;
 
-import cz.cuni.mff.amis.pacman.tournament.EvaluationInfos;
+import game.controllers.pacman.tournament.EvaluationInfos;
 
 
 public class running
@@ -15,7 +15,8 @@ public class running
     {
         
         FiniteStateMachine.main(args);
-        
+        EvaluationInfos de = new EvaluationInfos();
+        de.addResult(result);
         //File replay = new File("replay.log");
         //Replay R = new Replay(replay);
     }
