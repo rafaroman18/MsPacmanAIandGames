@@ -1,5 +1,6 @@
 package com.github.rafaroman18.game.controllers.pacman;
 
+import com.github.rafaroman18.game.PacManSimulator;
 import com.github.rafaroman18.game.controllers.ghosts.game.GameGhosts;
 import com.github.rafaroman18.game.controllers.pacman.PacManHijackController;
 import com.github.rafaroman18.game.core.G;
