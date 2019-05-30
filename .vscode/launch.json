@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - FiniteStateMachine",
+            "request": "launch",
+            "mainClass": "game.controllers.pacman.FiniteStateMachine",
+            "projectName": "MsPacmanAIandGames"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - running",
+            "request": "launch",
+            "mainClass": "running",
+            "projectName": "MsPacmanAIandGames"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - running",
             "request": "launch",
             "mainClass": "running",

@@ -1,7 +1,6 @@
 import game.controllers.pacman.FiniteStateMachine;
 import game.controllers.pacman.examples.NearestPillPacManVS;
 import game.controllers.pacman.examples.RandomPacMan;
-import game.controllers.pacman.tournament.EvaluateAgentConsole;
 import game.core.Replay;
 
 import java.io.File;
@@ -15,9 +14,8 @@ public class running
     {
         
         FiniteStateMachine.main(args);
-        EvaluationInfos de = new EvaluationInfos();
-        de.addResult(result);
         //File replay = new File("replay.log");
         //Replay R = new Replay(replay);
+
     }
 }

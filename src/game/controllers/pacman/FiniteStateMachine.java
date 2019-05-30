@@ -150,16 +150,18 @@ public final class FiniteStateMachine extends PacManHijackController {
 			{
 				// We have to guess the index of the ghost with the minimal distance
 				int NearestGhost = 0;
-				int DistanceGhost = game.getPathDistance(current, ghostsTarg[1]);
-				for (int i = 0; i < Game.NUM_GHOSTS; ++i) {
+				if(EdibleGhostLength != 0){
+				int DistanceGhost = game.getPathDistance(current, EdibleGhost[0]);
+				for (int i = 0; i < EdibleGhostLength; ++i) {
 					int j = game.getPathDistance(current, ghostsTarg[i]);
 					if (j < DistanceGhost) {
 						DistanceGhost = j;
 						NearestGhost = i;
 					}
 				}
+			}
 
-				if ((game.getEdibleTime(NearestGhost) < TIME_FLASH && game.getEdibleTime(NearestGhost) > 0)) {
+				if (EdibleGhostLength == 0 || (game.getEdibleTime(NearestGhost) < TIME_FLASH && game.getEdibleTime(NearestGhost) > 0)) {
 					currentState = states[currentState][1];
 				}
 			} else // check if ghosts are not visible anymore
