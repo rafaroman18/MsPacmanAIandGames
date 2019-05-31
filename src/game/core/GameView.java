@@ -18,7 +18,7 @@ import game.core.G;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-import tools.Scale2x;
+import game.tools.Scale2x;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
