@@ -18,4 +18,18 @@ Once a Power Pill is eaten, the automata goes to state *Chase Ghost* where MsPac
 
 Finally, the state *Evade Ghost* will be reached out when the ghosts are flashing (while we are in *Chase Ghost* state) and if any ghost is in sight if we are in *Seek Pellets* state. We can reach out this state too if we are in *Seek Pellets* and we have any ghost in sight.
 
+To try this method, call the main of the class FiniteStateMachine.
+
+
+Making the states was easy, but the transitions between them have more things to be careful that it seems. For this reason, some transitions are not exactly as the graph seen.
+
+First of all, the transition *PowerPill is eaten* is implemented as the graph, no variations. The transition **Ghost Flashing** was made empirically, so the variable *TIME_FLASH* was created to vary the time MsPacman guess she should run from the ghosts.
+
+**Ghosts in sight** was made by a certain distance represented by the variable *VISIBLE_DISTANCE*.
+
+Finally, we must say that the transition *Ghost Flashing* has in mind only the Nearest Ghost who is edible (or if any Ghost is still Edible) and the transition *Ghosts in sight* only the NOT edible ghosts.
+
+## 2. Monte Carlo Tree Search
+
+
 
