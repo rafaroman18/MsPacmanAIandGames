@@ -8,7 +8,8 @@ public class running {
     public static void main(String[] args) throws JSAPException {
 
         //FiniteStateMachine.main(args);
-        EvaluateAgentConsole.main(args);
+        //EvaluateAgentConsole.main(args);
+        System.out.println(args[0]);
         // File replay = new File("replay.log");
         // Replay R = new Replay(replay);
     }

@@ -1,0 +1,1 @@
+mvn -q clean compile exec:java -Dexec.mainClass="com.github.rafaroman18.mspacman.running" -Dexec.args= "-p FiniteStateMachine -i FSM -o Default"

@@ -1,7 +1,7 @@
-package game.controllers.pacman.tournament.run;
+package com.github.rafaroman18.game.controllers.pacman.tournament.run;
 
-import game.controllers.pacman.tournament.PacManConfig;
-import game.controllers.pacman.IPacManController;
+import com.github.rafaroman18.game.controllers.pacman.tournament.PacManConfig;
+import com.github.rafaroman18.game.controllers.pacman.IPacManController;
 
 public class PacManRuns {
 	
