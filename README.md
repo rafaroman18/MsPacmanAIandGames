@@ -31,5 +31,28 @@ Finally, we must say that the transition *Ghost Flashing* has in mind only the N
 
 ## 2. Monte Carlo Tree Search
 
+Next, we will implement the **Monte Carlo Tree Search**. For the implementation we will use generic trees to make
+the search easier.
+
+Monte Carlo Search Tree has 4 stages:
+
+1. **Select**. We see ehich node we must to expand.
+
+2. **Expansion**. We expand that node
+
+3. **Simulation**. We take random actions till a terminal state is reach
+
+4. **BackPropagation**. The outcome of each node is added to the actual node and its parent and "it's backed up" until we reach the root node.
+
+![MCTS strategy](images_met/MCTS.png)
+
+The Heuristic Function will be ruled by this formula:
+
+                          HEURISTIC FUNCTION
+	    Current SCORE of the game - 1.500 x (Lives Lost). 
+		     10.000 (if WIN) // -10.000 (if LOSE)
+
+
+
 
 

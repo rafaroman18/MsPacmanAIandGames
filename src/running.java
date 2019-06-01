@@ -6,12 +6,9 @@ public class running
 {
     public static void main(String[] args)
     {
-        Game g;
-        
-        TreeNode<Game> Arbol = new TreeNode<Game>(g);
-        Arbol.addChild(g);
-        Arbol.addChild(g);
-        //FiniteStateMachine.main(args);
+       
+        FiniteStateMachine.main(args);
+        HeuristicFunction()
 
     }
 }
