@@ -36,7 +36,7 @@ the search easier.
 
 Monte Carlo Search Tree has 4 stages:
 
-1. **Select**. We see ehich node we must to expand.
+1. **Select**. We see which node we must to expand.
 
 2. **Expansion**. We expand that node
 

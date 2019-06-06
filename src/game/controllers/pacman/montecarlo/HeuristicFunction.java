@@ -1,4 +1,4 @@
-package game.controllers.pacman.trees;
+package game.controllers.pacman.montecarlo;
 import game.core.Game;
 
 
