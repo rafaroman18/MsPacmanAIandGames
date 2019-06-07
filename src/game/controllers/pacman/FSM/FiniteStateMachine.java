@@ -1,4 +1,4 @@
-package game.controllers.pacman;
+package game.controllers.pacman.FSM;
 
 import game.PacManSimulator;
 import game.controllers.ghosts.game.GameGhosts;

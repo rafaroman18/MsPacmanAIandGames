@@ -1,4 +1,4 @@
-package game.controllers.pacman.tournament;
+package game.controllers.pacman.tournament;/*
 
 import java.io.File;
 import java.lang.reflect.Constructor;
@@ -315,4 +315,4 @@ public class EvaluateAgentConsole {
 	    System.exit(0);
 	}
 
-}
+}*/

@@ -1,16 +1,8 @@
 package game.controllers.pacman.montecarlo;
 
-import game.PacManSimulator;
-import game.SimulatorConfig;
-import game.controllers.ghosts.GhostAction;
-import game.controllers.ghosts.GhostsActions;
-import game.controllers.ghosts.IGhostsController;
-import game.controllers.ghosts.game.GameGhostAI;
 import game.controllers.ghosts.game.GameGhosts;
-import game.controllers.pacman.IPacManController;
 import game.controllers.pacman.PacManHijackController;
 import game.core.G;
-import game.core.Game;
 
 //Simulate random actions until the Depth variable is reached out or a final state is get
 //Lets add a Maximum Depth variable. So the tree will be exploring "Depth" future actions (or if a terminal state is get)
