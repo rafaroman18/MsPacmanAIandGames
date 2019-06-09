@@ -1,30 +1,14 @@
-import java.util.ArrayList;
-import java.util.Vector;
+import java.util.*;
 
+import game.controllers.pacman.MonteCarlo;
 import game.controllers.pacman.FSM.*;
-import game.controllers.pacman.trees.*;
+import game.controllers.pacman.MonteCarlo.*;
 
 public class running
 {
     public static void main(String[] args)
     {
         //FiniteStateMachine.main(args);
-        TreeNode<String> root = new TreeNode<String>("1");
-        TreeNode<String> dos = root.addChild("2");
-        TreeNode<String> tres = root.addChild("3");
-
-        dos.addChild("4");
-        dos.addChild("5");
-
-        tres.addChild("6");
-        tres.addChild("7");
-
-        ArrayList<Integer> v = new ArrayList<Integer>();
-        v.ad
-
-        System.out.println(root.children.get(1));
-        System.out.println(root.children.get(1).isLeaf());
-        
-
+        MonteCarlo.main(args);
     }
 }

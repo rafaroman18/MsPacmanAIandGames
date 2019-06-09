@@ -11,7 +11,7 @@ public class UCB
     public static double value(int H, double C, int n, int N)
     {
         double UCB = 0;
-        UCB = H + 2 * C * Math.sqrt((2*Math.log(N))/n);
+        UCB = H/n + 2 * C * Math.sqrt((2*Math.log(N))/n);
         return UCB;
     }
 }
